@@ -2,8 +2,11 @@ package myCalculator;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 public class Calculator {
+    private static final Logger logger = LogManager.getLogger(Calculator.class);
     public static double root(int num) {
         Scanner sc = new Scanner(System.in);
         while(num < 0) {
@@ -24,6 +27,21 @@ public class Calculator {
         for(int i = 2; i <= num; i++) {
             answer *= i;
         }
+        return answer;
+    }
+
+    public static double logarithm(int num) {
+        Scanner sc = new Scanner(System.in);
+        while(num < 0) {
+            System.out.print("Please enter a positive number: ");
+            num = sc.nextInt();
+        }
+        double answer = Math.log(num);
+        return answer;
+    }
+
+    public static double power(int n1, int n2) {
+        double answer = Math.pow(n1, n2);
         return answer;
     }
 
@@ -61,6 +79,18 @@ public class Calculator {
                 n = sc.nextInt();
                 double answer = factorial(n);
                 System.out.println("The factorial of the input number is: " + answer);
+            }
+            else if(option == 3) {
+                System.out.print("Enter the input for natural logarithm function: ");
+                n = sc.nextInt();
+                double answer = logarithm(n);
+                System.out.println("The natural logarithm of the input number is: " + answer);
+            }
+            else if(option == 4) {
+                System.out.print("Enter the input for power function: ");
+                int n1 = sc.nextInt(), n2 = sc.nextInt();
+                double answer = power(n1, n2);
+                System.out.println("The output of the power function is: " + answer);
             }
             else if(option == 5) {
                 check = 0;
