@@ -11,4 +11,4 @@
       shell: docker pull deepesh007/calculator_mini_project
 
     - name: running container
-      shell: docker run -it --name calculator -d deepesh007/calculator_mini_project
+      shell: docker run -it -d deepesh007/calculator_mini_project
