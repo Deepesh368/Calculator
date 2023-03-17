@@ -7,7 +7,7 @@ public class TestCalculator {
     Calculator cal = new Calculator();
     @Test
     public void rootTruePositive(){
-        assertEquals( "Finding square root for True Positive", 6, cal.root(36), DELTA);
+        assertEquals("Finding square root for True Positive", 6, cal.root(36), DELTA);
         assertEquals("Finding square root for True Positive", 8, cal.root(64), DELTA);
     }
     @Test
