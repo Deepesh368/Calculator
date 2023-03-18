@@ -1,3 +1,4 @@
 FROM openjdk:11
-ADD ./target/MyCalculator-1.0-SNAPSHOT-shaded.jar ./
+COPY ./target/MyCalculator-1.0-SNAPSHOT-shaded.jar ./
+WORKDIR ./
 ENTRYPOINT ["java","-jar","MyCalculator-1.0-SNAPSHOT-shaded.jar"]
