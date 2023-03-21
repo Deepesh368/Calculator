@@ -13,9 +13,9 @@ public class Calculator {
             System.out.print("Please enter a positive number: ");
             num = sc.nextInt();
         }
-        logger.info("[SQUARE ROOT - " + num + " ]");
+        logger.info("[SQUARE ROOT] - " + num);
         double answer = Math.sqrt(num);
-        logger.info("[SQUARE ROOT ANSWER - " + answer  + " ]");
+        logger.info("[SQUARE ROOT ANSWER] - " + answer);
         return answer;
     }
 
@@ -25,12 +25,12 @@ public class Calculator {
             System.out.print("Please enter a positive number: ");
             num = sc.nextInt();
         }
-        logger.info("[FACTORIAL - " + num + " ]");
+        logger.info("[FACTORIAL] - " + num);
         int answer = 1;
         for(int i = 2; i <= num; i++) {
             answer *= i;
         }
-        logger.info("[FACTORIAL ANSWER - " + answer + " ]");
+        logger.info("[FACTORIAL ANSWER] - " + answer);
         return answer;
     }
 
@@ -40,16 +40,16 @@ public class Calculator {
             System.out.print("Please enter a positive number: ");
             num = sc.nextInt();
         }
-        logger.info("[LOGARITHM - " + num + " ]");
+        logger.info("[LOGARITHM] - " + num);
         double answer = Math.log(num);
-        logger.info("[LOGARITHM ANSWER - " + answer + " ]");
+        logger.info("[LOGARITHM ANSWER] - " + answer);
         return answer;
     }
 
     public static double power(int n1, int n2) {
-        logger.info("[POWER - " + n1 + " AND " + n2 + " ]");
+        logger.info("[POWER] - " + n1 + " AND " + n2);
         double answer = Math.pow(n1, n2);
-        logger.info("[POWER ANSWER - " + answer + " ]");
+        logger.info("[POWER ANSWER] - " + answer);
         return answer;
     }
 
@@ -72,10 +72,10 @@ public class Calculator {
             try {
                 option = sc.nextInt();
             }
-            catch (InputMismatchException excep) {
-                System.out.println("There was a error in recording your selctions. Please try again.");
+            catch (InputMismatchException exception) {
+                System.out.println("There was a error in recording your selections. Please try again.");
             }
-            int n = 0;
+            int n;
             if(option == 1) {
                 System.out.print("Enter the input for square root function: ");
                 n = sc.nextInt();
